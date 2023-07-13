@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user_uuid": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
+      "username": "Fun Times Coding",
+      "handle": "felix1805",
+      "bio": "A collection of coding related content geared towards web developers and those aspiring to become one.",
+      "link": "https://github.com/felix1805",
+      "img": "https://avatars.githubusercontent.com/u/1591804?v=4",
+      "instagram_url": "https://www.instagram.com/felix231333/",
+      "followers": [
+        {
+          "user_uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
+        },
+        {
+          "user_uuid": "38c74976-6344-4446-96da-af391fffb358"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user_uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8",
+      "username": "John the Drifter",
+      "handle": "Drift-R-Us",
+      "bio": "A page dedicated to my journey drifting my old Nissan.",
+      "link": "www.drift-r-us.com",
+      "img": "https://i.imgur.com/nYKZrGN.jpeg",
+      "instagram_url": "https://www.instagram.com/drift-r-us/",
+      "followers": [
+        {
+          "user_uuid": "1ca9589e-c746-4208-b1ff-3d72962dbad1"
+        },
+        {
+          "user_uuid": "38c74976-6344-4446-96da-af391fffb358"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "user_uuid": "38c74976-6344-4446-96da-af391fffb358",
+      "username": "Jim the Detailer",
+      "handle": "JimsDetailing101",
+      "bio": "This page is about my adventures in Automotive detailing, come for a ride!",
+      "link": "https://www.jimthedetailer101.com",
+      "img": "https://i.imgur.com/My8jYc2.jpeg",
+      "instagram_url": "https://www.instagram.com/jimsdetailing101/",
+      "followers": [
+        {
+          "user_uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
+        },
+        {
+          "user_uuid": "1ca9589e-c746-4208-b1ff-3d72962dbad1"
+        }
+      ]
+    }
+  ],
+  "threads": []
+}
