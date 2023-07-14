@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": 0,
       "user_uuid": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
       "username": "Fun Times Coding",
       "handle": "felix1805",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 1,
       "user_uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8",
       "username": "John the Drifter",
       "handle": "Drift-R-Us",
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "user_uuid": "38c74976-6344-4446-96da-af391fffb358",
       "username": "Jim the Detailer",
       "handle": "JimsDetailing101",
@@ -55,5 +55,83 @@
       ]
     }
   ],
-  "threads": []
+  "threads": [
+    {
+      "id": 0,
+      "timestamp": "Fri Jul 14 2023 14:45:58 GMT-0400 (Eastern Daylight Time)",
+      "thread_from": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Hello my friends, this is a great way to start a thread!",
+      "likes": [
+        {
+          "uuid": "38c74976-6344-4446-96da-af391fffb358"
+        },
+        {
+          "uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "timestamp": "Fri Jul 14 2023 16:32:47 GMT-0400 (Eastern Daylight Time)",
+      "thread_from": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "This new app is a bit odd...",
+      "likes": [
+        {
+          "uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "timestamp": "Fri Jul 14 2023 18:22:16 GMT-0400 (Eastern Daylight Time)",
+      "thread_from": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Who else likes to have a good time?",
+      "likes": [
+        {
+          "uuid": "38c74976-6344-4446-96da-af391fffb358"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "timestamp": "Fri Jul 14 2023 19:14:26 GMT-0400 (Eastern Daylight Time)",
+      "thread_from": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Hello to all my motorsports enthusiasts!",
+      "likes": [
+        {
+          "uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "timestamp": "Fri Jul 14 2023 21:18:04 GMT-0400 (Eastern Daylight Time)",
+      "thread_from": "19876a20-4b64-455f-8695-c7fa0d79bfb8",
+      "thread_to": null,
+      "reply_to": null,
+      "text": "Happy to announce that I installed a new Wisefab angle kit on my S14!",
+      "likes": [
+        {
+          "uuid": "1ca9589e-c746-4208-b1ff-3d72962dbad1"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "timestamp": "Fri Jul 14 2023 22:08:17 GMT-0400 (Eastern Daylight Time)",
+      "thread_from": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
+      "thread_to": "19876a20-4b64-455f-8695-c7fa0d79bfb8",
+      "reply_to": 4,
+      "text": "Can't wait to see it in action!",
+      "likes": []
+    }
+  ]
 }
