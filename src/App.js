@@ -2,15 +2,39 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Feed from "./components/Feed";
 import PopUp from "./components/PopUp";
+import { useState, useEffect } from "react";
 
 const App = () => {
+  const [user, setUser] = useState(null)
+  const userId = "1ca9589e-c746-4208-b1ff-3d72962dbad1";
+
+  const getUser = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/users?user_uuid=${userId}`)
+      const data = await response.json()
+
+      setUser(data[0])
+
+    } catch (error) {
+      console.error(error)
+    }
+  };
+
+  useEffect(() => {
+    getUser()
+  }, [])
+
+  console.log(user);
+
   return (
-    <div className="app">
-      <Nav></Nav>
-      <Header></Header>
-      <Feed></Feed>
-      {/* <PopUp></PopUp> */}
-    </div>
+    <>
+      {user && <div className="app">
+        <Nav url={user.instagram_url}></Nav>
+        <Header user={user}></Header>
+        <Feed></Feed>
+        {/* <PopUp></PopUp> */}
+      </div>}
+    </>
   );
 }
 
