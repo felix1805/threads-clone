@@ -9,7 +9,7 @@ const App = () => {
       <Nav></Nav>
       <Header></Header>
       <Feed></Feed>
-      <PopUp></PopUp>
+      {/* <PopUp></PopUp> */}
     </div>
   );
 }

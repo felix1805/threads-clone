@@ -5,6 +5,7 @@ const Header = () => {
         <div className="user-info-container">
           <h1>username</h1>
           <p>handle <span className="threads-info">threads.net</span></p>
+        </div>
           <div className="img-container">
             <img src="" alt="profile avatar" />
           </div>
@@ -22,7 +23,6 @@ const Header = () => {
           <button className="current">Threads</button>
           <button>Replies</button>
         </div>
-      </div>
     </header>
   )
 }
