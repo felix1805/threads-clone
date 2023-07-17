@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [user, setUser] = useState(null)
+  const [threads, setThreads] = useState(null)
+
   const userId = "1ca9589e-c746-4208-b1ff-3d72962dbad1";
 
   const getUser = async () => {
@@ -20,11 +22,26 @@ const App = () => {
     }
   };
 
+  const getThreads = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/threads?thread_from=${userId}`)
+      const data = await response.json()
+
+      setThreads(data)
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   useEffect(() => {
     getUser()
+    getThreads()
   }, [])
 
-  console.log(user);
+
+
+  console.log(threads);
 
   return (
     <>
