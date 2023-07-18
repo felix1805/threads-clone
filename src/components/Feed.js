@@ -1,6 +1,6 @@
 import Thread from "./Thread";
 
-const Feed = () => {
+const Feed = ({ filteredThreads, user }) => {
   return (
     <div className="feed">
       <Thread></Thread>

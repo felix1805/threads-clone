@@ -96,6 +96,7 @@ button.primary {
 
 .button-container button.current {
   border-bottom: rgb(250, 250, 250) solid 2px;
+  font-weight: 900;
 }
 
 .feed-card .icons {
