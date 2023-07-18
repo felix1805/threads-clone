@@ -59,7 +59,7 @@ const App = () => {
 
 
 
-  console.log(filteredThreads);
+  console.log("filteredTHreads",filteredThreads);
 
   return (
     <>

@@ -1,11 +1,14 @@
 import Thread from "./Thread";
 
-const Feed = ({ filteredThreads, user }) => {
+const Feed = ({ user, filteredThreads }) => {
   return (
-    <div className="feed">
-      <Thread></Thread>
+    <div className="feeds">
+
+      {filteredThreads.map(filteredThread => 
+        <Thread key={filteredThread.id} user={user} filteredThread={filteredThread}/>)}
     </div>
   )
 }
 
 export default Feed;
+
