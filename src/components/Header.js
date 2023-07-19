@@ -20,14 +20,9 @@ const Header = ({ user, viewThreadsFeed, setViewThreadsFeed }) => {
         Share Profile
       </button>
       <div className="button-container">
-        <button className={viewThreadsFeed ? 'current' : null}
-          onClick={() => setViewThreadsFeed(true)}
-        >Threads</button>
+        <button className={viewThreadsFeed ? 'current' : null} onClick={() => setViewThreadsFeed(true)}>Threads</button>
 
-        <button
-          className={!viewThreadsFeed ? 'current' : null}
-          onClick={() => setViewThreadsFeed(false)}
-        >Replies</button>
+        <button className={!viewThreadsFeed ? 'current' : null} onClick={() => setViewThreadsFeed(false)}>Replies</button>
 
       </div>
     </header>

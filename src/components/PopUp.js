@@ -1,11 +1,18 @@
 import PopUpThread from "./PopUpThread";
 import ThreadInput from "./ThreadInput";
 
-const PopUp = () => {
+const PopUp = ({ user, setOpenPopUp, popUpFeedThreads }) => {
   return (
     <div className="popup">
-      <PopUpThread/>
-      <ThreadInput/>
+      <p onClick={() => setOpenPopUp(false)}>X</p>
+      {popUpFeedThreads?.map(popUpFeedThread =>
+        <PopUpThread
+          user={user}
+          key={popUpFeedThread.id}
+          popUpFeedThread={popUpFeedThread}
+        />
+      )}
+      <ThreadInput />
     </div>
   )
 }

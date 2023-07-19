@@ -65,10 +65,10 @@
       "text": "Hello my friends, this is a great way to start a thread!",
       "likes": [
         {
-          "uuid": "38c74976-6344-4446-96da-af391fffb358"
+          "user_uuid": "38c74976-6344-4446-96da-af391fffb358"
         },
         {
-          "uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
+          "user_uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
         }
       ]
     },
@@ -81,7 +81,7 @@
       "text": "This new app is a bit odd...",
       "likes": [
         {
-          "uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
+          "user_uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
         }
       ]
     },
@@ -94,7 +94,7 @@
       "text": "Who else likes to have a good time?",
       "likes": [
         {
-          "uuid": "38c74976-6344-4446-96da-af391fffb358"
+          "user_uuid": "38c74976-6344-4446-96da-af391fffb358"
         }
       ]
     },
@@ -105,11 +105,7 @@
       "thread_to": null,
       "reply_to": null,
       "text": "Hello to all my motorsports enthusiasts!",
-      "likes": [
-        {
-          "uuid": "19876a20-4b64-455f-8695-c7fa0d79bfb8"
-        }
-      ]
+      "likes": []
     },
     {
       "id": 4,
@@ -118,11 +114,7 @@
       "thread_to": null,
       "reply_to": null,
       "text": "Happy to announce that I installed a new Wisefab angle kit on my S14!",
-      "likes": [
-        {
-          "uuid": "1ca9589e-c746-4208-b1ff-3d72962dbad1"
-        }
-      ]
+      "likes": []
     },
     {
       "id": 5,
@@ -131,6 +123,15 @@
       "thread_to": "19876a20-4b64-455f-8695-c7fa0d79bfb8",
       "reply_to": 4,
       "text": "Can't wait to see it in action!",
+      "likes": []
+    },
+    {
+      "id": 6,
+      "timestamp": "Fri Jul 14 2023 23:13:34 GMT-0400 (Eastern Daylight Time)",
+      "thread_from": "19876a20-4b64-455f-8695-c7fa0d79bfb8",
+      "thread_to": "1ca9589e-c746-4208-b1ff-3d72962dbad1",
+      "reply_to": 0,
+      "text": "Awesome stuff!",
       "likes": []
     }
   ]
