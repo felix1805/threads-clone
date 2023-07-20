@@ -1,18 +1,20 @@
+import { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Feed from "./components/Feed";
 import PopUp from "./components/PopUp";
-import { useState, useEffect } from "react";
 import WriteIcon from "./components/WriteIcon";
 
+
 const App = () => {
-  const [user, setUser] = useState(null);
-  const [threads, setThreads] = useState(null);
-  const [viewThreadsFeed, setViewThreadsFeed] = useState(true);
-  const [filteredThreads, setFilteredThreads] = useState(null);
-  const [openPopUp, setOpenPopUp] = useState(false);
-  const [interactingThread, setInteractingThread] = useState(null);
-  const [popUpFeedThreads, setPopUpFeedThreads] = useState(null);
+  const [user, setUser] = useState(null)
+  const [threads, setThreads] = useState(null)
+  const [viewThreadsFeed, setViewThreadsFeed] = useState(true)
+  const [filteredThreads, setFilteredThreads] = useState(null)
+  const [openPopUp, setOpenPopUp] = useState(false)
+  const [interactingThread, setInteractingThread] = useState(null)
+  const [popUpFeedThreads, setPopUpFeedThreads] = useState(null)
+  const [text, setText] = useState('')
 
   const userId = "1ca9589e-c746-4208-b1ff-3d72962dbad1"
 
@@ -47,11 +49,42 @@ const App = () => {
     }
   }
 
+
+
+
   const getReplies = async () => {
     try {
       const response = await fetch(`http://localhost:3000/threads?reply_to=${interactingThread?.id}`)
       const data = await response.json()
       setPopUpFeedThreads(data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const postThread = async () => {
+    const thread = {
+      "timestamp": new Date(),
+      "thread_from": user.user_uuid,
+      "thread_to": user.user_uuid || null,
+      "reply_to": interactingThread?.id || null,
+      "text": text,
+      "likes": []
+    }
+    try {
+      const response = await fetch("http://localhost:3000/threads", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(thread)
+      })
+      const result = await response.json()
+      console.log('success', result)
+      getThreads()
+      getReplies()
+      setText('')
+
     } catch (error) {
       console.error(error)
     }
@@ -68,10 +101,16 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    getThreadsFeed()
+    getThreadsFeed();
   }, [user, threads, viewThreadsFeed])
 
+  console.log('interactingThread', interactingThread)
 
+  const handleClick = () => {
+    setPopUpFeedThreads(null)
+    setInteractingThread(null)
+    setOpenPopUp(true)
+  }
 
   return (
     <>
@@ -95,8 +134,11 @@ const App = () => {
               user={user}
               setOpenPopUp={setOpenPopUp}
               popUpFeedThreads={popUpFeedThreads}
+              text={text}
+              setText={setText}
+              postThread={postThread}
             />}
-          <div onClick={() => setOpenPopUp(true)}>
+          <div onClick={handleClick}>
             <WriteIcon />
           </div>
         </div>}
